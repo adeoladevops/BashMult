@@ -1,25 +1,25 @@
-This contains the script for both the list for and C styled For Loops for this project with user interaction
-The user is asked to enter what Multiplication table he wishes to view, then follow up with a question of
-whether to show in full or partial with view in ascending order or otherwise.
-The ones without "order" has no sorting features
-Cheers!!!
+This contains the script for both the list for and C styled For Loops for this project with user interaction<br>
+The user is asked to enter what Multiplication table he wishes to view, then follow up with a question of<br>
+whether to show in full or partial with view in ascending order or otherwise.<br>
+The ones without "order" has no sorting features<br>
+Cheers!!!<br>
 
 
 
 ********************Listform For Loop********************
 
 
-#!/bin/bash
+#!/bin/bash<br>
+#Get user input for the number, table choice, and order preference<br>
 
-# Get user input for the number, table choice, and order preference
-read -p "Enter a number for the multiplication table you want to see: " numb
-read -p "Do you want the Full table (F) or Partial table (P)? Enter F or P: " ans
-ans=${ans,,}  # Convert choice to lowercase
+read -p "Enter a number for the multiplication table you want to see: " numb<br>
+read -p "Do you want the Full table (F) or Partial table (P)? Enter F or P: " ans<br>
+ans=${ans,,}  # Convert choice to lowercase<br>
 
-# Ask for order preference (ascending or descending)
-read -p "Do you want to see the table in Ascending (A) or Descending (D) order? Enter A or D: " sort
-sort=${sort,,}  # Convert order to lowercase
+#Ask for order preference (ascending or descending)<br>
 
+read -p "Do you want to see the table in Ascending (A) or Descending (D) order? Enter A or D: " sort<br>
+sort=${sort,,}  # Convert order to lowercase<br>
 if [[ "$ans" == "f" ]]; then
     # Full table from 1 to 12
     if [[ "$sort" == "a" ]]; then
@@ -38,12 +38,12 @@ if [[ "$ans" == "f" ]]; then
         echo "Invalid sorting selected! Please enter A or D."
     fi
 
-elif [[ "$ans" == "p" ]]; then
+elif [[ "$ans" == "p" ]]; then<br>
     # Ask for starting and ending numbers for partial table
     read -p "Enter the starting number: " start
     read -p "Enter the ending number: " end
 
-    # Check for improper range
+    #Check for improper range
     if (( start > end )); then
         echo "You've entered improper range! Displaying the full table instead:"
         if [[ "$sort" == "a" ]]; then
@@ -75,11 +75,11 @@ elif [[ "$ans" == "p" ]]; then
             done
         else
             echo "Invalid sorting selected! Please enter A or D."
-        fi
-    fi
-else
-    echo "Invalid table choice! Please enter F or P."
-fi
+        fi <br>
+    fi <br>
+else<br>
+    echo "Invalid table choice! Please enter F or P."<br>
+fi<br>
 
 
 
@@ -88,15 +88,15 @@ fi
 
 #!/bin/bash
 
-# Get user input for the number, table choice, and order preference
-read -p "Enter a number for the multiplication table you want to see: " numb
-read -p "Do you want the Full table (F) or Partial table (P)? Enter F or P: " ans
-ans=${ans,,}  # Convert choice to lowercase
+#Get user input for the number, table choice, and order preference<br>
 
-# Ask for order preference (ascending or descending)
-read -p "Do you want to see the table in Ascending (A) or Descending (D) order? Enter A or D: " sort
-sort=${sort,,}  # Convert order to lowercase
+read -p "Enter a number for the multiplication table you want to see: " numb<br>
+read -p "Do you want the Full table (F) or Partial table (P)? Enter F or P: " ans<br>
+ans=${ans,,}  # Convert choice to lowercase<br>
 
+#Ask for order preference (ascending or descending)<br>
+read -p "Do you want to see the table in Ascending (A) or Descending (D) order? Enter A or D: " sort<br>
+sort=${sort,,}  # Convert order to lowercase<br>
 if [[ "$ans" == "f" ]]; then
     # Full table from 1 to 12
     if [[ "$sort" == "a" ]]; then
@@ -113,14 +113,13 @@ if [[ "$ans" == "f" ]]; then
         done
     else
         echo "Invalid sorting selected! Please enter A or D."
-    fi
+    fi<br>
 
-elif [[ "$ans" == "p" ]]; then
-    # Ask for starting and ending numbers for partial table
+elif [[ "$ans" == "p" ]]; then<br>
+    #Ask for starting and ending numbers for partial table<br>
     read -p "Enter the starting number: " start
     read -p "Enter the ending number: " end
-
-    # Check for improper range
+    #Check for improper range
     if (( start > end )); then
         echo "You've entered improper range! Displaying the full table instead:"
         if [[ "$sort" == "a" ]]; then
@@ -151,6 +150,6 @@ elif [[ "$ans" == "p" ]]; then
         fi
     fi
 else
-    echo "Invalid table choice! Please enter F or P."
-fi
+    echo "Invalid table choice! Please enter F or P."<br>
+fi<br>
 
