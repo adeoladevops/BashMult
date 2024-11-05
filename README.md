@@ -105,6 +105,7 @@ Cheers!!!<br>
     echo "Invalid table choice! Please enter F or P."
     fi
 
+![image](https://github.com/user-attachments/assets/2eb0b820-9513-4ae4-a8db-f645c0c89a31)
 
 
 ********************C-Stlyed For Loop********************
@@ -194,4 +195,6 @@ Cheers!!!<br>
     else
     echo "Invalid table choice! Please enter F or P."
     fi
+
+![image](https://github.com/user-attachments/assets/0ea95970-4a4c-41b8-a9a8-89b1fff405e4)
 
